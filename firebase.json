@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "daily-trivia",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
