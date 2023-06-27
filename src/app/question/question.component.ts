@@ -9,6 +9,4 @@ import { Question } from '../question';
 export class QuestionComponent {
   @Input() question: Question;
   @Input() orderNum: number = 0;
-  @Output() edit = new EventEmitter<Question>();
-  date: string
 }
