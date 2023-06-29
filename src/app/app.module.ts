@@ -19,11 +19,15 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { QuestionComponent } from './question/question.component';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TriviaComponent } from './trivia/trivia.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    TriviaComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
