@@ -1,0 +1,11 @@
+.home-button-container{
+    text-align: center;
+}
+
+.home-title{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 25px;
+    padding: 20px;
+}
