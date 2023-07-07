@@ -8,6 +8,8 @@ export class Question{
     difficulty?: number;
     points?: number;
     note?: string;
+    numRight: number = 0;
+    numWrong: number = 0;
     constructor(category: string, text: string, answer: string){
         this.category = category;
         this.text = text;

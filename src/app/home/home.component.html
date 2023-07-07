@@ -4,7 +4,7 @@
 
 <mat-card appearance="outlined">
     <div class="home-button-container">
-        <button mat-fab color="primary" routerLink="/trivia">
+        <button mat-fab color="primary" routerLink="/trivia" *ngIf="eligible">
             <mat-icon>play_arrow</mat-icon>
         </button>
         <button mat-fab color="accent" routerLink="/info">

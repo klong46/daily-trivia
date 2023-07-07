@@ -25,6 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { InfoComponent } from './info/info.component';
 import { StatsComponent } from './stats/stats.component';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { StatsComponent } from './stats/stats.component';
     MatCardModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),

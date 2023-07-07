@@ -1,7 +1,20 @@
-<div class="container-wrapper">
+<!-- <div class="container-wrapper">
     <div class="container">
         <h1>Questions For {{today}}</h1>
         <h2>Category: {{category}}</h2>
         <app-question *ngFor="let question of questionList | async; let i = index" [question]="question" [orderNum]="i+1"></app-question>
     </div>
+</div> -->
+
+<div *ngIf="triviaList.length != 0 && !allAnswered">
+
+    <div>#{{qIndex+1}}</div>
+    <div>Category: {{category}}</div>
+    <div>Question: {{triviaList[qIndex].text}}</div>
+    <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input matInput type="text" [(ngModel)]="answerInput">
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="submitAnswer()">Submit</button>
+    <div>Answer: {{triviaList[qIndex].answer}}</div>
 </div>
