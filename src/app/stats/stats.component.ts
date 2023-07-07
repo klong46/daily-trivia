@@ -13,5 +13,11 @@ export class StatsComponent implements OnInit{
   constructor(private collection: CollectionService){}
 
   ngOnInit(): void {
+    this.initPage();
+  }
+
+  async initPage(){
+    await this.collection.refreshData();
+    this.triviaList = this.collection.getTriviaList();
   }
 }

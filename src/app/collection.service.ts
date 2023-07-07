@@ -14,7 +14,7 @@ export class CollectionService {
 
   constructor(private store: AngularFirestore){};
 
-  async fetchTrivia(){
+  async refreshData(){
     let questionList = this.store.collection(this.getQuestionColName()).valueChanges({ idField: 'id' }) as Observable<Question[]>;
     this.category = await this.setCategory(questionList);
     this.triviaList = await this.setTriviaList(questionList);

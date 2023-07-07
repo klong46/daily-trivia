@@ -8,10 +8,10 @@ import { CollectionService } from './collection.service';
 })
 export class AppComponent implements OnInit{ 
 
-  constructor(private collectionService: CollectionService){};
+  constructor(private collection: CollectionService){};
 
   ngOnInit(): void {
-    this.collectionService.fetchTrivia();
+    this.collection.refreshData();
   }
 
 

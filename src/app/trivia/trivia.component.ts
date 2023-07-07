@@ -19,6 +19,11 @@ export class TriviaComponent implements OnInit{
   allAnswered: boolean = false;
 
   ngOnInit(): void {
+    this.initPage();
+  }
+
+  async initPage(){
+    await this.collection.refreshData();
     this.triviaList = this.collection.getTriviaList();
     this.category = this.collection.getCategory();
   }

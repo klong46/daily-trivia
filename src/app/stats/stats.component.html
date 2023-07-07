@@ -1,1 +1,13 @@
-<p>STATS here</p>
+<div *ngFor="let question of triviaList; index as i">
+    <mat-card>
+        <mat-card-title>#{{i+1}}</mat-card-title>
+        <mat-card-subtitle>{{question.text}}</mat-card-subtitle>
+        <mat-card-content>
+            Number of correct answers: {{question.numRight}} <br>
+            Number of incorrect answers: {{question.numWrong}}
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+
