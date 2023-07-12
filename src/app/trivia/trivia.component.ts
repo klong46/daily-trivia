@@ -29,8 +29,7 @@ export class TriviaComponent implements OnInit{
   }
 
   async submitAnswer(){
-    let answer = this.answerInput;
-    answer.toLowerCase().trim();
+    let answer = this.answerInput.toLowerCase().trim();;
     let isCorrect = (answer === this.triviaList[this.qIndex].answer);
     isCorrect ? this.triviaList[this.qIndex].numRight++ : this.triviaList[this.qIndex].numWrong++;
     if(this.qIndex < this.triviaList.length-1){
